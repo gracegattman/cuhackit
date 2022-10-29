@@ -29,6 +29,7 @@ app.post('/add_student',(req, res) => {
         value : 0
     }
     if (list_of_students.length !== 0){
+        console.log(`test: ${list}`)
         new_student.id = list_of_students[list_of_students.length-1].id + 1;
     }
     list_of_students.push(new_student)
