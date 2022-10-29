@@ -23,7 +23,7 @@ app.get('/',(req, res) => {
 
 app.post('/add_student',(req, res) => {
 
-    const new_student = {
+    let new_student = {
         id : 0,
         active: true,
         value : 0
