@@ -75,6 +75,7 @@ app.get('/current_average', (req, res) => {
     res.send({"current_average":current_average})
 })
 
+
 const port = process.env.PORT || 3001
 app.listen(port, () => console.log(`listening on ${port}`))
 
