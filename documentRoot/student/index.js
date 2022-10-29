@@ -24,6 +24,7 @@ axios.post(`../dynamic/add_student`).then(
 
 
 slider.addEventListener("input", (event) => {
+    console.log(id)
     console.log(slider.value);
     output.innerHTML = slider.value;
     axios.post(`../dynamic/change_val`, {
