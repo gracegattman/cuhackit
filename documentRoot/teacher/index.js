@@ -1,4 +1,9 @@
-axios.get("localhost:3001/current_average").then((res) => {
-    res.query["current_average"]
-    console.log(res);
-});
+while(true){
+    setTimeout(
+    axios.get("localhost:3001/current_average").then((res) => {
+        res.query["current_average"]
+        console.log(res);
+    }),
+    1000
+    )
+}
