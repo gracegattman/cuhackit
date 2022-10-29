@@ -34,7 +34,6 @@ app.post('/add_student',(req, res) => {
     list_of_students.push(new_student)
     console.log(new_student.id)
 
-    res.sendStatus(200)
     res.send({"id":new_student.id})
     return;
 });
