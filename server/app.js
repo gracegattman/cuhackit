@@ -49,7 +49,7 @@ const update_average = (req) => {
     for (let i = 0; i < list_of_students.length; i++) {
         student = list_of_students[i]
         if (student.active) {
-            sum += (int) (student.value)
+            sum = sum + student.value
             count++
             console.log("sum: " + sum)
     
