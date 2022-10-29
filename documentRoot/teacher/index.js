@@ -12,6 +12,6 @@ axios.post("/question"), {
 
     axios.get("../dynamic/current_average").then((res) => {
         //res.query["current_average"]
-        console.log(res.query);
+        console.log(res.data);
     })
 
