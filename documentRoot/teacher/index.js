@@ -12,6 +12,6 @@ axios.post("/question"), {
 
     axios.get("../dynamic/current_average").then((res) => {
         //res.query["current_average"
-        steve.innerHTML = res.data
+        steve.innerHTML = res.data["current_average"]
     })
 
