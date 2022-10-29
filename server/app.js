@@ -51,6 +51,7 @@ const update_average = (req) => {
         if (student.active) {
             sum += student.value
             count++
+            console.log("sum: " + sum)
     
         }
     }
