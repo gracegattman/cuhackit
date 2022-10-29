@@ -16,7 +16,7 @@ var id;
 axios.post(`../dynamic/add_student`).then(
     result => {
         console.log(result)
-        id = result.id;
+        id = result.data.id;
     }
 ).catch(e => {
     console.log(e);
