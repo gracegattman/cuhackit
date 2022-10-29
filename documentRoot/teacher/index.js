@@ -1,12 +1,12 @@
 var newQuestion
 
-/*
+
 axios.post("/question"), {
     newQuestion: question
 }.then(() => {
     document.getElementById("questions").innerHTML = newQuestion
 })
-*/
+
 
 
     setTimeout(
