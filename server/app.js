@@ -15,6 +15,7 @@ app.use(express.json());
 
 
 const list_of_students = []
+var current_average
 
 app.get('/',(req, res) => {
     res.send('accessing api');
@@ -50,8 +51,8 @@ const update_average = (req) => {
     
         }
     }
-    average = sum/count;
-    console.log(average)
+    current_average = sum/count;
+    console.log(current_average)
 }
 
 app.post('/change_val',(req, res) => {
@@ -59,7 +60,6 @@ app.post('/change_val',(req, res) => {
     update_average(req);
     res.sendStatus(200)
 });
-
 
 
 app.post('/delete_student',(req, res) => {
@@ -70,6 +70,10 @@ app.post('/delete_student',(req, res) => {
     update_average(req)
     res.sendStatus(200);
 });
+
+app.get('/current_average', (req, res) => {
+    res.send(current_average)
+})
 
 const port = process.env.PORT || 3001
 app.listen(port, () => console.log(`listening on ${port}`))
