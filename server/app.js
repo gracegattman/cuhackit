@@ -76,6 +76,7 @@ app.post('/delete_student',(req, res) => {
 });
 
 app.get('/current_average', (req, res) => {
+    console.log(current_average)
     res.send({"current_average":current_average})
 })
 
