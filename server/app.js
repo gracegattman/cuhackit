@@ -59,7 +59,7 @@ const update_average = (req) => {
 app.post('/change_val',(req, res) => {
     console.log(req.body["value"]);
     console.log(req.body["id"]);
-    console.log(list_of_students[req.body["id"]-1].value);
+    //console.log(list_of_students[req.body["id"]-1].value);
 
     list_of_students[req.body["id"]-1].value = req.body["value"]
     update_average(req);
