@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 .slidecontainer {
+    text-align: center;
     width: 100%; /* Width of the outside container */
   }
   
@@ -7,7 +7,7 @@
   .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 100%; /* Full-width */
+    width: 50%; /* Full-width */
     height: 25px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
@@ -37,24 +37,23 @@
     background: #04AA6D; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
-=======
-body {
-    background-color: #F9AF4B
-}
 
-h1 {
+  body {
+    background-color: #F9AF4B
+  }
+
+  h1 {
     color: black;
     text-align: center;
     font-size: 300%;
-}
+  }
 
-h3 {
+  h3 {
     font-size: 150%;
     margin-bottom: -15px;
     text-align: center;
-}
+  }
 
-p {
+  p {
     text-align: center;
-}
->>>>>>> b3f5143a2e889d1353261e76152f0edfe256eb65
+  }
