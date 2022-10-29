@@ -8,6 +8,7 @@ axios.post("/question"), {
 })
 */
     const steve = document.getElementById("steve")
+    steve.innerHTML = 0
 
 
     axios.get("../dynamic/current_average").then((res) => {
