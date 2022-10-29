@@ -18,7 +18,10 @@ axios.post(`../dynamic/add_student`).then(
         console.log(result.id)
         id = result.id;
     }
-)
+).catch(e => {
+    console.log(e);
+});
+
 
 axios.post(`../dynamic/change_val`, {
     "id":id,
