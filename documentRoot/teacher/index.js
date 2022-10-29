@@ -8,7 +8,7 @@ axios.post("/question"), {
 })
 */
 
-while(true){
+
     setTimeout(
     axios.get("localhost:3001/current_average").then((res) => {
         res.query["current_average"]
@@ -16,4 +16,3 @@ while(true){
     }),
     1000
     )
-}
