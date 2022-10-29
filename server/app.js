@@ -37,7 +37,7 @@ app.post('/add_student',(req, res) => {
     return;
 });
 
-const update_average = () => {
+const update_average = (req) => {
  let sum;
  let count;   
     for (let i = 0; i < list_of_students.length; i++) {
@@ -59,7 +59,6 @@ app.post('/change_val',(req, res) => {
 
 
 app.post('/delete_student',(req, res) => {
-    console.log("Hi I Exist");
     console.log(list_of_students[req.body["id"]]);
     list_of_students[req.body["id"]].active = false
     console.log(list_of_students[req.body["id"]]);
