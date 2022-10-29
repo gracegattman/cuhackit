@@ -44,6 +44,8 @@ const update_average = (req) => {
  let count = 0;
  let student;
 
+ console.log("avg:" + current_average)
+
     for (let i = 0; i < list_of_students.length; i++) {
         student = list_of_students[i]
         if (student.active) {
@@ -53,8 +55,8 @@ const update_average = (req) => {
         }
     }
     current_average = sum/count;
-    console.log(current_average)
-}
+    console.log("avg:" + current_average)
+} 
 
 app.post('/change_val',(req, res) => {
     console.log(req.body["value"]);
