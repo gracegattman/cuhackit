@@ -38,21 +38,25 @@ app.post('/add_student',(req, res) => {
 });
 
 const update_average = (req) => {
- let sum;
- let count;   
+ let sum = 0;
+ let count = 0;
+ let student;
+
     for (let i = 0; i < list_of_students.length; i++) {
-        if (list_of_students[req.body["id"]].active) {
+        student = list_of_students[i]
+        if (student.active) {
             sum += student.value
             count++
     
         }
     }
     average = sum/count;
+    console.log(average)
 }
 
 app.post('/change_val',(req, res) => {
     list_of_students[req.body["id"]].value = req.body["value"]
-    update_average();
+    update_average(req);
     res.sendStatus(200)
 });
 
@@ -63,7 +67,7 @@ app.post('/delete_student',(req, res) => {
     list_of_students[req.body["id"]].active = false
     console.log(list_of_students[req.body["id"]]);
 
-    update_average()
+    update_average(req)
     res.sendStatus(200);
 });
 
