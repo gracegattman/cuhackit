@@ -26,7 +26,9 @@ axios.post(`../dynamic/add_student`).then(
 axios.post(`../dynamic/change_val`, {
     "id":id,
     "value":slider.value
-})
+}).catch(e => {
+    console.log(e);
+});
 
 slider.addEventListener("input", (event) => {
     console.log(event);
@@ -34,5 +36,7 @@ slider.addEventListener("input", (event) => {
     axios.post(`../dynamic/change_val`, {
         "id":id,
         "value":slider.value
-    })
+    }).catch(e => {
+        console.log(e);
+    });
 })
